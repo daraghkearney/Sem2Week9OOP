@@ -36,4 +36,15 @@ public class CalculatorTest {
         assertEquals("Cannot Divide By 0", ex.getMessage());
     }
 
+    @Test
+    void testSubtractSuccess() {
+        assertEquals(8, myCalc.subtract(16, 8));
+    }
+
+    @Test
+    void testSubtractFail() {
+        Exception ex = assertThrows(IllegalStateException.class, () -> myCalc.subtract(3, 5));
+        assertEquals("Second Number Cannot be Greater than the First", ex.getMessage());
+    }
+
 }

@@ -20,4 +20,13 @@ public class Calculator {
         }
         return (int) result;
     }
+
+    public int subtract(int firstNum, int secondNum) {
+        long result = (long) firstNum - secondNum;
+        if(secondNum > firstNum)
+        {
+            throw new IllegalStateException("Second Number Cannot be Greater than the First");
+        }
+        return (int) result;
+    }
 }

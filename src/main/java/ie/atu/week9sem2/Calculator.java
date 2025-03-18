@@ -13,9 +13,13 @@ public class Calculator {
     }
 
     public int divide(int firstNum, int secondNum) {
-        long result = (long) firstNum / secondNum;
-        if(result > Integer.MAX_VALUE)
+        if(secondNum == 0)
         {
+            throw new ArithmeticException("Cannot Divide By 0");
+        }
+        long result = (long) firstNum / secondNum;
+
+        if (result > Integer.MAX_VALUE) {
             throw new ArithmeticException("This value is too big");
         }
         return (int) result;

@@ -47,4 +47,15 @@ public class CalculatorTest {
         assertEquals("Second Number Cannot be Greater than the First", ex.getMessage());
     }
 
+    @Test
+    void testMultiplySuccess() {
+        assertEquals(8, myCalc.multiply(2, 4));
+    }
+
+    @Test
+    void testMultiplyFail() {
+        Exception ex = assertThrows(UnsupportedOperationException.class, () -> myCalc.multiply(Integer.MAX_VALUE, 2));
+        assertEquals("Result exceeds valid integer range", ex.getMessage());
+    }
+
 }

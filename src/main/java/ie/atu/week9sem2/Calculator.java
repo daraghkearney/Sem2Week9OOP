@@ -2,7 +2,7 @@ package ie.atu.week9sem2;
 
 public class Calculator {
 
-    public int add(int firstNum, secondNum)
+    public int add(int firstNum, int secondNum)
     {
         long result = (long) firstNum + secondNum;
         if(result > Integer.MAX_VALUE)

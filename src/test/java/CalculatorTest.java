@@ -16,12 +16,12 @@ public class CalculatorTest {
 
     @Test
     void testAddSuccess() {
-        assertEquals(8, myCalc.add(4, 4));
+        assertEquals(8, myCalc.add(4,4));
     }
 
     @Test
     void testAddFail() {
         Exception ex = assertThrows(IllegalArgumentException.class, () -> {myCalc.add(Integer.MAX_VALUE, 4);});
-        assertEquals("This value is too big1", ex.getMessage());
+        assertEquals("This value is too big", ex.getMessage());
     }
 }

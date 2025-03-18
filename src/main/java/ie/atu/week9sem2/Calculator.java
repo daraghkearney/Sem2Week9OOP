@@ -29,4 +29,12 @@ public class Calculator {
         }
         return (int) result;
     }
+
+    public int multiply(int firstNum, int secondNum) {
+        long result = (long) firstNum * secondNum;
+        if (result > Integer.MAX_VALUE || result < Integer.MIN_VALUE) {
+            throw new UnsupportedOperationException("Result exceeds valid integer range");
+        }
+        return (int) result;
+    }
 }

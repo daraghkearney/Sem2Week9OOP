@@ -24,4 +24,16 @@ public class CalculatorTest {
         Exception ex = assertThrows(IllegalArgumentException.class, () -> {myCalc.add(Integer.MAX_VALUE, 4);});
         assertEquals("This value is too big", ex.getMessage());
     }
+
+    @Test
+    void testDivideSuccess() {
+        assertEquals(8, myCalc.divide(64, 8));
+    }
+
+    @Test
+    void testDivideFail() {
+        Exception ex = assertThrows(ArithmeticException.class, () -> myCalc.divide(10, 0));
+        assertEquals("Cannot Divide By 0", ex.getMessage());
+    }
+
 }
